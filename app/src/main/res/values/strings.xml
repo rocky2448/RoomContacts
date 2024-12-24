@@ -1,6 +1,9 @@
 <resources>
-    <string name="app_name">Room</string>
+    <string name="app_name">Contacts by Room</string>
     <string name="note">Заметка</string>
     <string name="save">Сохранить</string>
     <string name="blank_note">\n\n</string>
+    <string name="exit">Выход</string>
+    <string name="name">Имя</string>
+    <string name="phone">Телефон</string>
 </resources>

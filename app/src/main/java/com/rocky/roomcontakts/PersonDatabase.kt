@@ -5,17 +5,17 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [Note::class], version = 1, exportSchema = false)
-abstract class NoteDatabase : RoomDatabase(){
-    abstract fun getNoteDao() : NoteDao
+@Database(entities = [Person::class], version = 1, exportSchema = false)
+abstract class PersonDatabase : RoomDatabase(){
+    abstract fun getPersonDao() : PersonDao
     companion object {
-        private var INSTANCE: NoteDatabase? = null
-        fun getDatabase(context: Context) : NoteDatabase {
+        private var INSTANCE: PersonDatabase? = null
+        fun getDatabase(context: Context) : PersonDatabase {
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    NoteDatabase::class.java,
-                    "note_database"
+                    PersonDatabase::class.java,
+                    "person_database"
                 ).build()
                 INSTANCE = instance
                 instance

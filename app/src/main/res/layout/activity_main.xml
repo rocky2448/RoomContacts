@@ -6,14 +6,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/background"
     tools:context=".MainActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar"
+        app:titleTextColor="@color/black"
+        tools:ignore="MissingConstraints" />
+
     <EditText
-        android:id="@+id/noteET"
+        android:id="@+id/nameET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:hint="@string/note"
+        android:hint="@string/name"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/phoneET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="@string/phone"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,14 +47,17 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="@string/save"
-        android:textSize="16sp"
-        android:onClick="saveData" />
+        android:backgroundTint="@color/button"
+        android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/contactTV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/blank_note"
-        android:textAlignment="center" />
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginStart="20dp"
+        android:textAlignment="textStart" />
 
 </LinearLayout>
